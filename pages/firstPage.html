@@ -9,17 +9,31 @@
 </head>
 
 <body>
-    <div data-role="page">
+    <div data-role="page" id="home">
         <div data-role="header">
-            <h1>My page</h1>
+            <h1>Home</h1>
         </div>
         <div role="main" class="ui-content">
-            <p>my page content</p>
+            <p>my home page content</p>
+            <a href="#about" data-transition="pop">About this page</a>
         </div>
         <div data-role="footer">
-            <h4>Page footer</h4>
+            <h4>home Page footer</h4>
         </div>
     </div>
+
+    <div data-role="page" id="about">
+            <div data-role="header">
+                <h1>About</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <p>my wonderful jQuery Mobile app</p>
+                <a href="#home" data-rel="back">go back home</a>
+            </div>
+            <div data-role="footer">
+                <h4>Page footer</h4>
+            </div>
+        </div>
 </body>
 
 </html>
