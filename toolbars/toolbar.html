@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <meta name="viewport" content="width=divice-width, initial-scale=1, maximum-scale=1" />
+    <title> My button page</title>
+    <style>
+        .ui-icon-myapp-cap:after {
+            background-image: url('../svg/graduate-cap.svg')
+        }
+
+        .ui-icon-myapp-poo:after {
+            background-image: url('../svg/poo-solid.svg')
+        }
+    </style>
+    <script>
+        $(function () {
+            $("[data-role='header']").toolbar();
+            $("[data-role='footer']").toolbar();
+        });
+    </script>
+</head>
+
+<body>
+    <div data-role="header" data-position="fixed" data-theme="b">
+        <h1>Home</h1>
+        <a href="#about" data-transition="pop" class="ui-btn ui-btn-a ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-grid  ui-alt-icon ui-nodisc-icon">menu</a>
+        <a href="#about" data-transition="pop" class="ui-btn ui-btn-inline ui-corner-all ui-btn-icon-right ui-icon-star">
+            favoris </a>
+    </div>
+
+    <div data-role="page" id="home">
+
+        <div role="main" class="ui-content">
+            <p>my home page content</p>
+            <a href="#about" data-transition="pop" class="ui-btn ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-star">About
+                this page</a>
+            <p>Custom button</p>
+            <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-myapp-cap">cap</a>
+
+            <div data-role="controlgroup" data-type="horizontal">
+                <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-myapp-poo">poopy</a>
+                <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-myapp-poo ui-nodisc-icon">poopy</a>
+                <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-myapp-poo">poopy</a>
+            </div>
+            <div data-role="controlgroup">
+                <a href="#" class="ui-btn  ui-corner-all ui-btn-icon-left ui-icon-plus">plus</a>
+                <a href="#" class="ui-btn  ui-corner-all ui-btn-icon-left ui-icon-minus">minus</a>
+                <a href="#" class="ui-btn  ui-corner-all ui-btn-icon-left ui-icon-info">info</a>
+            </div>
+        </div>
+        <!--         <div data-role="footer" class="ui-bar">
+            <a href="#" class="ui-btn ui-btn-inline ui-mini">menu</a>
+            <a href="#" class="ui-btn ui-btn-inline ui-mini">article</a>
+            <a href="#" class="ui-btn ui-btn-inline ui-mini">settings</a>
+        </div> -->
+
+    </div>
+
+    <div data-role="page" id="about" data-title="About">
+        <div role="main" class="ui-content">
+            <p>my wonderful jQuery Mobile app</p>
+            <a href="#home" data-rel="back">go back home</a>
+        </div>
+        <!-- <div data-role="footer">
+            <h4>Page footer</h4>
+        </div> -->
+    </div>
+
+    <div data-role="footer" data-position="fixed" data-theme="b">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#" class="ui-btn ui-btn-inline ui-mini">menu</a></li>
+                <li><a href="#" class="ui-btn ui-btn-inline ui-mini ui-btn-active">article</a></li>
+                <li><a href="#" class="ui-btn ui-btn-inline ui-mini">settings</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
